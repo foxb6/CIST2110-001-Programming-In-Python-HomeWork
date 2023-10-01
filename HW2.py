@@ -10,7 +10,7 @@ age=input('Enter your age: ')
 # If the age is less than 13, print "You are a child."
 age=int(age)
 if age > 20:
-    print("You are an afult.")
+    print("You are an adult.")
 elif age < 13:
     print("You are a child.")
 else:
@@ -37,18 +37,30 @@ for i in range(1, 6):
 # Question 3:
 # Write a Python program that prompts the user to input 10 numbers. After all the numbers are inputted, the program should display:
 
-num1=float(input('Enter a number: '))
-num2=float(input('Enter a number: '))
-num3=float(input('Enter a number: '))
-num4=float(input('Enter a number: '))
-num5=float(input('Enter a number: '))
-num6=float(input('Enter a number: '))
-num7=float(input('Enter a number: '))
-num8=float(input('Enter a number: '))
-num9=float(input('Enter a number: '))
-num10=float(input('Enter a number: '))
+
+sum_of_numbers = 0
+min_number = None
+max_number = None
 
 
+for i in range(10):
+    number = float(input("Enter a number: "))
+    sum_of_numbers += number
+
+    
+    if min_number is None or number < min_number:
+        min_number = number
+    if max_number is None or number > max_number:
+        max_number = number
+
+
+average = sum_of_numbers / 10
+
+
+print("Sum of the numbers:", sum_of_numbers)
+print("Average of the numbers:", average)
+print("Minimum number:", min_number)
+print("Maximum number:", max_number)
 
 
 # The highest number.
@@ -60,3 +72,10 @@ num10=float(input('Enter a number: '))
 # the vowels are a, e, i, o, u
 # Hint: convert the string to lowercase and use a for loop with a counter variable and an if statement
 
+vowel_count = 0
+user_input = input("Enter a string: ")
+user_input = user_input.lower()
+for count in user_input:
+    if count in "aeiou":
+        vowel_count += 1
+print("Number of vowels:", vowel_count)
