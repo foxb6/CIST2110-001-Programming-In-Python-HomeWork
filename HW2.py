@@ -5,7 +5,17 @@
 # Question 1:
 # Write some code that prompts the user for their age. Depending on the input:
 
+age=input('Enter your age: ')
+
 # If the age is less than 13, print "You are a child."
+age=int(age)
+if age > 20:
+    print("You are an afult.")
+elif age < 13:
+    print("You are a child.")
+else:
+    print("You are a teenager.")
+
 # If the age is between 13 and 19, print "You are a teenager."
 # If the age is 20 or older, print "You are an adult."
 
@@ -17,9 +27,29 @@
 # 123
 # 1234
 # 12345
+for i in range(1, 6):
+    for j in range(1, i + 1):
+        print(j, end="")
+    print()
+
+
 
 # Question 3:
 # Write a Python program that prompts the user to input 10 numbers. After all the numbers are inputted, the program should display:
+
+num1=float(input('Enter a number: '))
+num2=float(input('Enter a number: '))
+num3=float(input('Enter a number: '))
+num4=float(input('Enter a number: '))
+num5=float(input('Enter a number: '))
+num6=float(input('Enter a number: '))
+num7=float(input('Enter a number: '))
+num8=float(input('Enter a number: '))
+num9=float(input('Enter a number: '))
+num10=float(input('Enter a number: '))
+
+
+
 
 # The highest number.
 # The lowest number.
