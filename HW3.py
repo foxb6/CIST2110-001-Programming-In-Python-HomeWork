@@ -45,6 +45,20 @@ slm()
 # Write a function that takes in a number, a lower bound, and an upper bound and returns whether the number is within the bounds
 # IE. If the user inputs 5, 1, and 10, the function should return True
 
+def within(number, lower, upper):
+    return lower < number < upper
+
+number = float(input("Enter a number: "))
+lower = float(input("Enter the lower bound: "))
+upper = float(input("Enter the upper bound: "))
+
+if within(number, lower, upper)==True:
+    print(f"{number} is within the range [{lower}, {upper}].")
+else:
+    print(f"{number} is not within the range [{lower}, {upper}].")
+
+
+
 # Question 4:
 # Write a function that asks the user for their name, age, and favorite color. Then write a function that accepts those three parameters and prints them out in a sentence
 # IE. If the user inputs "John", 20, and "blue", the function should print "Hello, my name is John. I am 20 years old. My favorite color is blue."
@@ -86,11 +100,6 @@ result = math.sqrt(16)
 print("Square Root of 16:", result)
 
 =======
-# Question 5:
-# import the random module and use it to generate a random number between 1 and 100
-
-# Question 6:
-# import the math module and use it to find the square root of 16 (hint: use the sqrt() function)
 
 >>>>>>> 478fccbcfdc2d9f5f700e6de9f542e158d00b3a4
 # Question 7:
@@ -113,7 +122,6 @@ from os import getcwd
 current_directory = getcwd()
 print("Current Working Directory:", current_directory)
 =======
-# Question 8:
-# import the os module and use it to display the current working directory. This time import the module using the from keyword
-# hint: use the getcwd() function
+
+
 >>>>>>> 478fccbcfdc2d9f5f700e6de9f542e158d00b3a4
