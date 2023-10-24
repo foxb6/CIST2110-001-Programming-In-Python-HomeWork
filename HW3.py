@@ -7,7 +7,6 @@
 # Write a function that takes in a number and returns that number squared
 # IE. If the user inputs 3, the function should return 9
 
-<<<<<<< HEAD
 def squarenumber():
     num=float(input('Enter a number: '))
     sqnum=num**2
@@ -16,13 +15,10 @@ def squarenumber():
 squarenumber()
 
 
-=======
->>>>>>> 478fccbcfdc2d9f5f700e6de9f542e158d00b3a4
 # Question 2:
 # Write a function that takes in a string, a letter, and a number and returns the string with the letter replaced at the number index
 # IE. If the user inputs "Hello World", "a", and 3, the function should return "Helao World"
 
-<<<<<<< HEAD
 def slm():
     string = input('Input a string: ')
     letter = input('Input a letter: ')
@@ -39,8 +35,6 @@ slm()
 
 
 
-=======
->>>>>>> 478fccbcfdc2d9f5f700e6de9f542e158d00b3a4
 # Question 3:
 # Write a function that takes in a number, a lower bound, and an upper bound and returns whether the number is within the bounds
 # IE. If the user inputs 5, 1, and 10, the function should return True
@@ -67,7 +61,6 @@ else:
 # remember in class we learned you can return miltiple values from a function
 # also remember in class you can pass in pultiple variables into a function
 
-<<<<<<< HEAD
 def character():
     name = input('What is your name: ')
     age = input('What is your age: ')
@@ -99,15 +92,11 @@ result = math.sqrt(16)
 
 print("Square Root of 16:", result)
 
-=======
-
->>>>>>> 478fccbcfdc2d9f5f700e6de9f542e158d00b3a4
 # Question 7:
 # import the sys module and use it to display the version of python you are using
 # this time import the module using the import "as" keyword
 # hint: use the version attribute (sys.version)
 
-<<<<<<< HEAD
 import sys
 
 python_version = sys.version
@@ -121,7 +110,3 @@ from os import getcwd
 
 current_directory = getcwd()
 print("Current Working Directory:", current_directory)
-=======
-
-
->>>>>>> 478fccbcfdc2d9f5f700e6de9f542e158d00b3a4

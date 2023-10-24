@@ -28,9 +28,9 @@ def add(a:float, b:float) -> float:
     Returns:
         float: the sum of a and b
     """
-    return a - b
+    return a + b
 # Where is the bug in the buggy function?
-# A:
+# A: Line 31- Missing plus sign. Correction: return a + b
 
 def subtract(a:float, b:float) -> float:
     """Subtract two numbers
@@ -42,9 +42,9 @@ def subtract(a:float, b:float) -> float:
     Returns:
         float: the difference of a and b
     """
-    return a + b
+    return a - b
 # Where is the bug in the buggy function?
-# A:
+# A: Line 45- Missing minus sign. Correction: return a - b
 
 def divide(a, b):
     """Divide two numbers
@@ -56,9 +56,9 @@ def divide(a, b):
     Returns:
         float: the quotient of a and b
     """
-    return a * b
+    return a / b
 # Where is the bug in the buggy function?
-# A:
+# A: Line 59- Missing division sign. Correction: return a / b
 
 
 def multiply(a:float, b:float) -> float:
@@ -71,10 +71,10 @@ def multiply(a:float, b:float) -> float:
     Returns:
         float: the product of a and b
     """
-    return a / b
+    return a * b
 
 # Where is the bug in the buggy function?
-# A:
+# A: Line 74- Missing divide sign: Correction: return a * b
 
 
 def greet(name:str)->str:
@@ -88,7 +88,7 @@ def greet(name:str)->str:
     """
     return "Heloo, "+name+"!"
 # Where is the bug in the buggy function?
-# A:
+# A: Line 90- Heloo should be Hello. Correction: return "Hello, "+name+"!"
 
 
 def square(num:int) -> int:
@@ -100,9 +100,9 @@ def square(num:int) -> int:
     Returns:
         int: the square of the number
     """
-    return num + num
+    return num ** num
 # Where is the bug in the buggy function?
-# A:
+# A: Line 103- Missing squar sign. Correction: return num ** num
 
 
 def is_even(num:int) -> bool:
@@ -116,7 +116,7 @@ def is_even(num:int) -> bool:
     """
     return num % 2 == 1
 # Where is the bug in the buggy function?
-# A:
+# A: Line 118- 1 should be 0. Correction: return num % == 0
 
 
 def grade_calculator(score:float) -> str:
@@ -141,7 +141,7 @@ def grade_calculator(score:float) -> str:
     else:
         return "Invalid Score"
 # Where is the bug in the buggy function?
-# A:
+# A: Line 135- 79 should be 80. Correction: elif 70 <= score < 80:
 
 def speed_check(speed:float) -> str:
     """Check if the speed is within the speed limit
@@ -162,7 +162,7 @@ def speed_check(speed:float) -> str:
     else:
         return "Unknown"
 # Where is the bug in the buggy function?
-# A:
+# A: Line 158- 60 should be 70. Correction: elif 20 <= speed <= 70: 
 
 def is_leap_year(year:int) -> bool:
     """Check if a year is a leap year
@@ -176,13 +176,13 @@ def is_leap_year(year:int) -> bool:
     if year % 4 == 0:
         return True
     elif year % 100 == 0:
+        if year % 400==0:
+            return True
         return False
-    elif year % 400 == 0:
-        return True
     else:
         return False
 # Where is the bug in the buggy function?
-# A:
+# A: Line 178-181 contradict each other. Instead I put the mod 400 inside of the mod 100 statement.
 
 def main():
     print("You are running me directly!")
