@@ -1,5 +1,5 @@
 # HW8.py
-# Author:
+# Author: Bodhi Fox
 
 # This homework will exapnd upon the code for Lab9.py. If you did not complete Lab9.py, you should do so before attempting this homework.
 
@@ -11,11 +11,19 @@ import datetime as dt
 
 # Streamlit title, subtitle, date, and button
 
-
-
+st.title("Date Counter Web Application")
+st.subheader("This web app will count the number of days until a certain date")
+data= st.date_input("Enter a date: ")
+button= st.button("Calculate")
 
 # The calculate_days function from Lab9.py
 
+def calculate_days(date)->int:
+    current_date= dt.datetime.now().date()
+    days_difference= date- current_date
+    if days_difference.days < 0:
+        raise ValueError("The date entered is in the past")
+    return days_difference.days
 
 
 
