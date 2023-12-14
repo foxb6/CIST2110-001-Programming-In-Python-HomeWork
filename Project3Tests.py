@@ -52,8 +52,12 @@ def test_user_borrow():
 
 
 def test_user_return():
-    ### Implement this test case ###
-    pass  # Remove this line when you implement this test case
+    user = User("John Doe", 1)
+    book = Book("Test Book", "Author Name", 1234567890)
+    user.borrow_book(book)
+    user.return_book(book)
+    assert book not in user.borrowed_books
+    assert not book.borrowed
 
 
 # Test cases for the Library class
@@ -80,5 +84,10 @@ def test_library_find_book():
 
 
 def test_library_find_user():
-    ### Implement this test case ###
-    pass  # Remove this line when you implement this test case
+    library = Library()
+    user = User("John Doe", 1)
+    user.ID = user.member_id
+    library.add_user(user)
+    found_user = library.find_user(1)
+    assert found_user == user
+    
